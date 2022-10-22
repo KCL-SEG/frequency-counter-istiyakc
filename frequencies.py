@@ -3,5 +3,7 @@
 
 def frequencies(items):
     frequencies = {}
-    # Your code goes here
+    frequencies = dict.fromkeys(items, 0)
+    for i in frequencies:
+        frequencies[i] = items.count(frequencies[i])
     return frequencies
