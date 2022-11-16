@@ -4,16 +4,12 @@
 
 def frequencies(items):
     frequencies = {}
-    list = [str(item) for item in items]
-    frequencies = dict.fromkeys(items,0)
-
-    for i in list:
-
-        if list[i] in frequencies:
-
-            frequencies[i] += 1
+    for i in items:
+        if (str(i) not in frequencies.keys()):
+            frequencies[str(i)] = 1
         else:
-            frequencies[i] = 1
+            current = frequencies[str(i)] + 1
 
+            frequencies[str(i)] = current
 
     return frequencies
